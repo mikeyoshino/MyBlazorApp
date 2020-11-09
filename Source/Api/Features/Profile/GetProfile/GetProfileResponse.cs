@@ -11,6 +11,7 @@ namespace MyBlazorApp.Features.Profiles
     public string Rank { get; set; }
     public string Name { get; set; }
     public int Experience{ get; set; }
+    public GetProfileResponse() { }
 
     public GetProfileResponse(Guid aCorrelationId) : base(aCorrelationId) { }
   }
