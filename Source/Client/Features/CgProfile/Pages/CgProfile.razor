@@ -6,15 +6,7 @@
 <Page>
   <HeaderContent>Cg Profile</HeaderContent>
   <MainContent>
-    @if (@CgProfileState.Profile == null)
-    {
-      <p><em>Loading...</em></p>
-    }
-    else
-    {
-  <p>Level : @CgProfileState.Profile.Level</p>
-    }
-
+    @CgProfileState.CgProfile.Level
   </MainContent>
 </Page>
 

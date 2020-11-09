@@ -4,6 +4,7 @@ namespace MyBlazorApp.Features.Bases
   using MyBlazorApp.Features.Applications;
   using MyBlazorApp.Features.Counters;
   using MyBlazorApp.Features.EventStreams;
+  using MyBlazorApp.Features.Profiles;
   using MyBlazorApp.Features.WeatherForecasts;
 
   /// <summary>
@@ -20,6 +21,7 @@ namespace MyBlazorApp.Features.Bases
     protected EventStreamState EventStreamState => Store.GetState<EventStreamState>();
 
     protected WeatherForecastsState WeatherForecastsState => Store.GetState<WeatherForecastsState>();
+    protected CgProfileState CgProfileState => Store.GetState<CgProfileState>();
 
     public BaseHandler(IStore aStore) : base(aStore) { }
   }
