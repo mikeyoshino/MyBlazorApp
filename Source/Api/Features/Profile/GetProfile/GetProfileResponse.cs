@@ -6,11 +6,21 @@ namespace MyBlazorApp.Features.Profiles
 
   public class GetProfileResponse : BaseResponse
   {
-    public GetProfileResponse() { }
 
     public string Level { get; set; }
     public string Rank { get; set; }
+    public string Name { get; set; }
+    public int Ex { get; set; }
+    public ProfileDto CgProfile { get; set; }
+    public GetProfileResponse()
+    {
+      CgProfile = new ProfileDto();
+    }
 
-    public GetProfileResponse(Guid aCorrelationId) : base(aCorrelationId) { }
+    public GetProfileResponse(Guid aCorrelationId) : base(aCorrelationId) {
+
+      CgProfile = new ProfileDto();
+
+    }
   }
 }

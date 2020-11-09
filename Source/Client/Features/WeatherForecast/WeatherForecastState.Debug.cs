@@ -15,14 +15,14 @@ namespace MyBlazorApp.Features.WeatherForecasts
 
       var newWeatherForecastsState = new WeatherForecastsState()
       {
-        _WeatherForecasts = JsonSerializer.Deserialize<List<WeatherForecastDto>>(json, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }),
+        _WeatherForecasts = JsonSerializer.Deserialize<List<ProfileDto>>(json, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }),
         Guid = new System.Guid(aKeyValuePairs[CamelCase.MemberNameToCamelCase(nameof(Guid))].ToString()),
       };
 
       return newWeatherForecastsState;
     }
 
-    internal void Initialize(List<WeatherForecastDto> aWeatherForecastList)
+    internal void Initialize(List<ProfileDto> aWeatherForecastList)
     {
       ThrowIfNotTestAssembly(Assembly.GetCallingAssembly());
       _WeatherForecasts = Guard.Argument(aWeatherForecastList, nameof(aWeatherForecastList)).NotNull();

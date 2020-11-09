@@ -11,7 +11,7 @@ namespace WeatherForecastDto
     {
       //Arrange
       var jsonSerializerOptions = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
-      var weatherForecastDto = new WeatherForecastDto
+      var weatherForecastDto = new ProfileDto
       (
         aDate: DateTime.MinValue.ToUniversalTime(),
         aSummary: "Summary 1",
@@ -21,7 +21,7 @@ namespace WeatherForecastDto
       string json = JsonSerializer.Serialize(weatherForecastDto, jsonSerializerOptions);
 
       //Act
-      WeatherForecastDto parsed = JsonSerializer.Deserialize<WeatherForecastDto>(json, jsonSerializerOptions);
+      ProfileDto parsed = JsonSerializer.Deserialize<ProfileDto>(json, jsonSerializerOptions);
 
       //Assert
       weatherForecastDto.TemperatureC.ShouldBe(parsed.TemperatureC);

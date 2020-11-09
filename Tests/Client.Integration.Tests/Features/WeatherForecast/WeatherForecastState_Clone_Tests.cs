@@ -16,14 +16,14 @@ namespace WeatherForecastsState
     public void Clone()
     {
       //Arrange
-      var weatherForecasts = new List<WeatherForecastDto> {
-        new WeatherForecastDto
+      var weatherForecasts = new List<ProfileDto> {
+        new ProfileDto
         (
           aDate: DateTime.MinValue,
           aSummary: "Summary 1",
           aTemperatureC: 24
         ),
-        new WeatherForecastDto
+        new ProfileDto
         (
           aDate: new DateTime(2019,05,17),
           aSummary: "Summary 1",

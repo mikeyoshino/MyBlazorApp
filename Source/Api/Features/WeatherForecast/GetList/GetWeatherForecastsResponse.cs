@@ -10,19 +10,19 @@ namespace MyBlazorApp.Features.WeatherForecasts
     /// <summary>
     /// The collection of forecasts requested
     /// </summary>
-    public List<WeatherForecastDto> WeatherForecasts { get; set; }
+    public List<ProfileDto> WeatherForecasts { get; set; }
 
     /// <summary>
     /// a default constructor is required for client side deserialization
     /// </summary>
     public GetWeatherForecastsResponse()
     {
-      WeatherForecasts = new List<WeatherForecastDto>();
+      WeatherForecasts = new List<ProfileDto>();
     }
 
     public GetWeatherForecastsResponse(Guid aCorrelationId) : base(aCorrelationId)
     {
-      WeatherForecasts = new List<WeatherForecastDto>();
+      WeatherForecasts = new List<ProfileDto>();
     }
 
   }

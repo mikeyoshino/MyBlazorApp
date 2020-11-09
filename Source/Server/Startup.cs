@@ -20,6 +20,7 @@ namespace MyBlazorApp.Server
   using MyBlazorApp.Configuration;
   using MyBlazorApp.Features.Bases;
   using MyBlazorApp.Infrastructure;
+  using System.Net.Http;
 
   public class Startup
   {
@@ -101,7 +102,7 @@ namespace MyBlazorApp.Server
     );
 
       Client.Program.ConfigureServices(aServiceCollection);
-
+      aServiceCollection.AddSingleton<HttpClient>();
       aServiceCollection.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
 
       ConfigureSwagger(aServiceCollection);

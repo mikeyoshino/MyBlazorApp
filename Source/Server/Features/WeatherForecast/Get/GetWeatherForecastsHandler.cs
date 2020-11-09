@@ -36,7 +36,7 @@ namespace MyBlazorApp.Features.WeatherForecasts
       (
         aIndex => response.WeatherForecasts.Add
         (
-          new WeatherForecastDto
+          new ProfileDto
           (
             aDate: DateTime.Now.AddDays(aIndex),
             aSummary: Summaries[random.Next(Summaries.Length)],

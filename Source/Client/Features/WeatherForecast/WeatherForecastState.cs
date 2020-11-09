@@ -5,13 +5,13 @@ namespace MyBlazorApp.Features.WeatherForecasts
 
   internal partial class WeatherForecastsState : State<WeatherForecastsState>
   {
-    private List<WeatherForecastDto> _WeatherForecasts;
+    private List<ProfileDto> _WeatherForecasts;
 
-    public IReadOnlyList<WeatherForecastDto> WeatherForecasts => _WeatherForecasts.AsReadOnly();
+    public IReadOnlyList<ProfileDto> WeatherForecasts => _WeatherForecasts.AsReadOnly();
 
     public WeatherForecastsState()
     {
-      _WeatherForecasts = new List<WeatherForecastDto>();
+      _WeatherForecasts = new List<ProfileDto>();
     }
 
     public override void Initialize() { }

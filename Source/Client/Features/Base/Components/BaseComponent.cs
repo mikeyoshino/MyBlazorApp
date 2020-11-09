@@ -10,6 +10,7 @@ namespace MyBlazorApp.Features.Bases
   using MyBlazorApp.Features.Counters;
   using MyBlazorApp.Features.EventStreams;
   using MyBlazorApp.Features.WeatherForecasts;
+  using MyBlazorApp.Features.Profiles;
 
   /// <summary>
   /// Makes access to the State a little easier and by inheriting from
@@ -30,6 +31,7 @@ namespace MyBlazorApp.Features.Bases
     internal CounterState CounterState => GetState<CounterState>();
     internal EventStreamState EventStreamState => GetState<EventStreamState>();
     internal WeatherForecastsState WeatherForecastsState => GetState<WeatherForecastsState>();
+    internal CgProfileState CgProfileState => GetState<CgProfileState>();
 
 
     protected Task<TResponse> Send<TResponse>(IRequest<TResponse> aRequest) => Send(aRequest);

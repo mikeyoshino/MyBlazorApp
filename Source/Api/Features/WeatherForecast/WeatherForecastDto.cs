@@ -6,7 +6,7 @@ namespace MyBlazorApp.Features.WeatherForecasts
   /// <summary>
   /// The weather forecast
   /// </summary>
-  public class WeatherForecastDto
+  public class ProfileDto
   {
     /// <summary>
     /// The forecast for this Date 
@@ -30,9 +30,9 @@ namespace MyBlazorApp.Features.WeatherForecasts
     /// <example>75</example>
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-    public WeatherForecastDto() { }
+    public ProfileDto() { }
 
-    public WeatherForecastDto(DateTime aDate, string aSummary, int aTemperatureC)
+    public ProfileDto(DateTime aDate, string aSummary, int aTemperatureC)
     {
       Date = aDate;
       Summary = aSummary;
