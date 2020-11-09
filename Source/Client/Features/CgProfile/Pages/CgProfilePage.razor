@@ -1,0 +1,13 @@
+﻿@namespace MyBlazorApp.Pages
+@page "/CgProfile"
+@inherits BaseComponent
+
+<Page>
+  <HeaderContent>Weather Forecasts</HeaderContent>
+  <MainContent>
+    <p>This component demonstrates fetching data from the server.</p>
+
+      @CgProfileState.CgProfile.Level
+
+  </MainContent>
+</Page>
