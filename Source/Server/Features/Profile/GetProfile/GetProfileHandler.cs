@@ -31,10 +31,11 @@ namespace MyBlazorApp.Features.Profiles
       string resultString = await getPorfileResponse.Content.ReadAsStringAsync();
       CgProfile CgObj = JsonConvert.DeserializeObject<CgProfile>(resultString);
       var response = new GetProfileResponse(aGetProfileRequest.CorrelationId)
+
       {
         Level = CgObj.Codingamer.level,
         Rank = CgObj.Codingamer.rank,
-        Ex = CgObj.Codingamer.xp,
+        Experience = CgObj.Codingamer.xp,
         Name = CgObj.Codingamer.pseudo
       };
       return await Task.FromResult(response);

@@ -27,7 +27,10 @@
             getGetProfileRequest.GetRoute(), aCancellationToken
           )
           .ConfigureAwait(false);
-        CgProfileState._CgProfile = getProfileResponse.CgProfile;
+        CgProfileState.Level = getProfileResponse.Level;
+        CgProfileState.Rank = getProfileResponse.Rank;
+        CgProfileState.Name = getProfileResponse.Name;
+        CgProfileState.Ex = getProfileResponse.Experience;
         return Unit.Value;
 
       }

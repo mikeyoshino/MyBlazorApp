@@ -4,15 +4,11 @@
 
   internal partial class CgProfileState : State<CgProfileState>
   {
-    public ProfileDto _CgProfile;
+    public string Level { get; set; }
+    public string Rank { get; set; }
+    public string Name { get; set; }
+    public int Ex { get; set; }
 
-    public ProfileDto CgProfile => _CgProfile;
-
-    public CgProfileState()
-    {
-      _CgProfile = new ProfileDto();
-
-    }
     public override void Initialize() { }
   }
 }
