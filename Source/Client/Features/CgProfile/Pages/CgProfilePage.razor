@@ -18,10 +18,13 @@
       </div>
 
       <div class="mt-4 text-center">
-        <a href="#" class="inline-block px-5 py-3 bg-teal-600 rounded-lg text-white shadow-lg uppercase tracking-wide text-sm">View Profile</a>
+        <a href="@CgProfileUrl" target="_blank" class="inline-block px-5 py-3 bg-teal-600 hover:bg-teal-500 transition duration-500 ease-in-out rounded-lg text-white shadow-lg uppercase tracking-wide text-sm">View Profile</a>
         <a href="#" class="inline-block px-5 py-3 bg-gray-600 rounded-lg text-white shadow-lg uppercase tracking-wide text-sm">Contact me</a>
       </div>
     </div>
 
   </MainContent>
 </Page>
+@code{
+    private string CgProfileUrl = "https://www.codingame.com/profile/ede69031e8671a592c04562a69d92a250402493";
+}
