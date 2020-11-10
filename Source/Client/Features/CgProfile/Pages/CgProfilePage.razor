@@ -3,12 +3,25 @@
 @inherits BaseComponent
 
 <Page>
-  <HeaderContent>Weather Forecasts</HeaderContent>
-  <MainContent>
-    <p>This component demonstrates fetching data from the server.</p>
+  <HeaderContent>CodingGame Profile</HeaderContent>
+  <MainContent> 
+    <div class="text-center font-serif text-2xl uppercase tracking-wide pt-3 text-gray-700">profile</div>
+    <div class="max-w-7xl mx-auto py-1 sm:max-w-xl lg:px-8 ">
+      <!--!-->
+      <img class="mx-auto h-64 sm:w-full object-cover mt-3 rounded-lg shadow-2xl" src="https://i.imgur.com/oSOT0am.jpg" />
+      <div class="bg-white shadow-xl border border-gray-500 border-opacity-50 rounded-lg mt-10">
+        <div class="px-4 pt-3 pb-3 list-none text-gray-600 ">
+          <li>Name: @CgProfileState.Name</li>
+          <li>Rank: @CgProfileState.Rank</li>
+          <li>Experience: @CgProfileState.Ex</li>
+        </div>
+      </div>
 
-    @CgProfileState.Guid
-    @CgProfileState.Ex
+      <div class="mt-4 text-center">
+        <a href="#" class="inline-block px-5 py-3 bg-teal-600 rounded-lg text-white shadow-lg uppercase tracking-wide text-sm">View Profile</a>
+        <a href="#" class="inline-block px-5 py-3 bg-gray-600 rounded-lg text-white shadow-lg uppercase tracking-wide text-sm">Contact me</a>
+      </div>
+    </div>
 
   </MainContent>
 </Page>
